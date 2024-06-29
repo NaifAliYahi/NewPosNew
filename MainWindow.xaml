@@ -8,5 +8,6 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBlock Text="Hello  Group Treaing "/>
+        <Label x:Name="lbheder"  Content="conect"></Label>
     </Grid>
 </Window>
