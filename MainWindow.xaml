@@ -9,7 +9,7 @@
     <Grid>
         <TextBlock Text="Hello  Group Treaing  Testr"/>
         <Label x:Name="lbheder"  Content="conect"></Label>
-       <Label x:Name="lbhedddddderd" Height="66"  Content="Haron" ></Label>
+       <Label x:Name="lbhederd" Height="66"  Content="Haron" ></Label>
   <TextBlock Text="hhh  Group Treaing  Testr"/>
     </Grid>
 </Window>
