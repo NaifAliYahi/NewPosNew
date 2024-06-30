@@ -1,4 +1,5 @@
-﻿using NewPos.Data;
+﻿using NewPos.Core;
+using NewPos.Data;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,15 +18,31 @@ namespace NewPos
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly IDBNewPos<AdmUserData> op;
+        public MainWindow(IDBNewPos<AdmUserData> rep)
         {
             InitializeComponent();
-            AdmUserData ad=new AdmUserData(); 
+
+            op = rep;
         }
 
         private void btnsav_Click(object sender, RoutedEventArgs e)
         {
-            var dt=new DBContext(); 
+            AdmUserData ad = new AdmUserData
+            {
+                UserName = txtusername.Text,
+                UserPass = txtUserPass.Text,
+                FiscalYear = txtFiscalYear.Text,
+                OrganizationId = txtOrganizationId.Text,
+            }       
+            ;
+            op.AddAsync(ad).ConfigureAwait(true);
+           
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

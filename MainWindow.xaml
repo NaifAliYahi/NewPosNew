@@ -14,11 +14,15 @@
   
         <StackPanel Grid.ColumnSpan="2" >
             <Label x:Name="lbheder"  Content="Add User Name" Width="249"></Label>
-            <TextBox/>
-
-            <Label x:Name="lbhederd" Height="66"  Content="Add PassWred" ></Label>
-            <TextBox/>
+            <TextBox x:Name="txtusername"/>
+ <Label x:Name="lbhederd" Height="29"  Content="Add PassWred" ></Label>
+            <TextBox x:Name="txtUserPass"/>
+            <Label x:Name="lbhOrganizationId" Height="36"  Content="Add OrganizationId" ></Label>
+            <TextBox x:Name="txtOrganizationId"/>
+            <Label x:Name="lbhFiscalYear" Height="33"  Content="Add FiscalYear" ></Label>
+            <TextBox x:Name="txtFiscalYear"/>
             <Button x:Name="btnsav" Content="save" Click="btnsav_Click"></Button>
+            <Button x:Name="Delete" Content="Delete" Click="Delete_Click"></Button>
         </StackPanel>
     </Grid>
 </Window>
