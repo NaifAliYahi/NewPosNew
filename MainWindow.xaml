@@ -7,13 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="500">
     <Grid>
-        <Label x:Name="heder"  Content="Welcom in my frist project"></Label>
-        <StackPanel >  
-            <Label x:Name="lbheder"  Content="Add User Name"></Label>            
-        <TextBlock Text="Hello  Group Treaing  Testr"/>
-      
-       <Label x:Name="lbhederd" Height="66"  Content="Add PassWred" ></Label>
-  <TextBlock Text="hhh  Group Treaing  Testr"/>
-    </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+  
+        <StackPanel Grid.ColumnSpan="2" >
+            <Label x:Name="lbheder"  Content="Add User Name" Width="249"></Label>
+            <TextBox/>
+
+            <Label x:Name="lbhederd" Height="66"  Content="Add PassWred" ></Label>
+            <TextBox/>
+            <Button x:Name="btnsav" Content="save" Click="btnsav_Click"></Button>
+        </StackPanel>
     </Grid>
 </Window>
